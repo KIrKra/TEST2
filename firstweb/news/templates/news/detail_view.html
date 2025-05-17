@@ -1,0 +1,11 @@
+{% extends 'main/loy.html'%}
+{% block tit%}{{ news.title }}{% endblock %}
+{% block telo %}
+    <div class="feature">
+        <h1>{{ news.title }}</h1>
+         <p>{{ news.text }} </p>
+        <a href="% url 'delete_news' news.id  %" class="btn btn-danger">Удалить</a>
+        <a href="% url 'news_update' news.id  %" class="btn btn-danger">Редактировать</a>
+        
+    </div>
+{% endblock %}
