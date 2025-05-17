@@ -1,0 +1,12 @@
+{% extends 'main/loy.html'%}
+{% block tit%}{{ title }}{% endblock %}
+{% block telo %}
+    <div class="feature">
+        <h1>{{ title }}</h1>
+        <p>pl</p>
+        <button class ='btn btn-warning'>Кто он??</button>
+        {% for val in values %}
+            <p>{{ val}}</p>
+        {% endfor %}
+    </div>
+{% endblock %}
