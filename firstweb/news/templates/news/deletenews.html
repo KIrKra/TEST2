@@ -1,0 +1,11 @@
+{% extends 'main/loy.html'%}
+{% block tit%}Удаление статьи{% endblock %}
+{% block telo %}
+    <div class="feature">
+        <h1>Радости</h1>
+        <form method="post">
+            {% csrf_token %}
+            <button class="btn btn-success" type="submit">Удалить статью</button>
+        </form>
+    </div>
+{% endblock %}
