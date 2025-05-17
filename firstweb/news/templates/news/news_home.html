@@ -1,0 +1,19 @@
+{% extends 'main/loy.html'%}
+{% block tit%}Новост\и/Радости{% endblock %}
+{% block telo %}
+    <div class="feature">
+        <h1>Новости</h1>
+        {% if news %}
+            {% for el in news %}
+                <div class='alert alert-warning'>
+                    <h3>{{ el.title }}</h3>
+                    <p>{{ el.text }} </p>
+                    <a href="{% url 'news_detail' el.id %}" class="btn btn-warning">Прочесть</a>
+
+                </div>
+        {% endfor %}
+        {% else %}
+            <p>Тут пока нет записей</p>
+        {% endif %}
+    </div>
+{% endblock %}
